@@ -11,7 +11,7 @@ class studentRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true; // or Auth::check();
     }
 
     /**
@@ -22,9 +22,9 @@ class studentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string',
-            'phone' => 'required|integer',
-            'email' => 'required|string',
+            'name' => 'string',
+            'phone' => 'required',
+            'email' => 'string',
         ];
     }
 }

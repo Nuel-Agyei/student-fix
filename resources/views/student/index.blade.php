@@ -29,9 +29,9 @@
                                 <tbody>
                                     @foreach ($student as $student)
                                         <tr>
-                                            <td> {{ $student->Name }} </td>
-                                            <td> {{ $student->course }} </td>
-                                            <td> {{ $student->Class }} </td>
+                                            <td> {{ $student->name }} </td>
+                                            <td> {{ $student->phone }} </td>
+                                            <td> {{ $student->email }} </td>
                                             <td>
                                                 <a class="btn m-1 btn-sm btn-outline-primary" href="">Edit</a>
                                                 <form method="post" action="{{ route('student.delete') }}" class="inner">
@@ -50,7 +50,8 @@
                             <h2>No children registered</h2>
                             <a class="btn btn-sm btn-outline-primary" href="{{route('student.create')}}">Register Student</a><br>
                         @endif
-                        {{ __('Index Page') }}
+                        <a class="btn btn-sm btn-outline-primary" href="{{route('student.create')}}">Register Student</a><br>
+
                     </div>
                 </div>
             </div>
